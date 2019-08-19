@@ -273,12 +273,11 @@ footer a {
     position: absolute;
     top: 1rem;
     left: 2rem; }
-  .card__icon i, .forecast__icon i {
-    font-size: 3rem;
+  .card__icon img, .forecast__icon img {
     position: absolute;
-    top: 1rem;
-    left: 26rem;
-    color: #fff; }
+    top: 0;
+    left: 20rem;
+    width: 11rem; }
   .card__city p, .forecast__city p {
     font-size: 3rem;
     font-weight: 400;

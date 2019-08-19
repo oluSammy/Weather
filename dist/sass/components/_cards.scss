@@ -54,12 +54,11 @@
         }
     }
     &__icon{
-        & i{
-            font-size: 3rem;
-            position: absolute;
-            top: 1rem;
-            left: 26rem;
-            color: #fff;
+        & img{  
+             position: absolute;
+            top: 0;
+            left: 20rem;
+            width: 11rem;
         }
     }
     &__city{
