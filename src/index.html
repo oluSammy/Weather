@@ -21,16 +21,19 @@
     <title>Document</title>
 </head>
 <body>
+    
+
+    
     <header class="header">
         <div class="header__top">
             <div class="header__top-logo left">
                <a href=""><img src="img/logo.png" alt="weather logo" class="logo"></a>
             </div>
-            <form class="header__top-form left">
-                <input type="text" name="search-field" class="search-field left" placeholder="Search Locations">
-                <div class="btn btn-search left">
-                      <p> <i class="fas fa-search"></i>  search</p>
-                </div>
+            <form class="header__top-form left search">
+                <input type="text" name="search-field" class="search-field left" placeholder="Search Cities...">
+                <button class="btn btn-search left" type="submit">
+                       <i class="fas fa-search"></i>  search
+                </button>
             </form>
             <div class="header__top-recent left">
                 <div class="header__text">
@@ -44,9 +47,6 @@
             </div>
         </div>
         <div class="header__date">
-
-
-            <p class="date">24 september 2019</p>
         </div>
     </header>
 
@@ -416,9 +416,9 @@
     </section>
     <section class="section-forecast">
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-1-of-3">
-                <!-- <div class="card">
+                 <div class="card">
                     <h3 class="current">Current Weather</h3>
                     <div class="card__top">
                         <div class="card__picture card__picture--sky">
@@ -469,11 +469,11 @@
                     </div>
 
 
-                </div> -->
+                </div> 
             </div>
             <div class="new-col-2-of-3 new-forecast">
                 <div class="forecast">
-                        <!-- <div class="forecast__header current">Weather Forecast</div>
+                         <div class="forecast__header current">Weather Forecast</div>
                         <div class="forecast__cur">
                             <div class="forecast__cur-prev left btn">
                                 <p class="prec"> <span><i class="fas fa-backward"></i></span> Prev</p>
@@ -523,20 +523,20 @@
                                             </div>
                                         </div>
                                     </div>
-                        </div> -->
+                        </div> 
 
                 </div>
 
 
             </div>
-        </div>
+        </div> -->
     </section>
     <div class="section--footer">
         <footer>
-            <form class="header__top-form left">
-                        <input type="text" name="search-field" class="search-field left" placeholder="Search Locations">
+            <form class="header__top-form left search">
+                        <input type="text" name="search-field" class="search-field left" placeholder="Search Cities">
                         <div class="btn btn-search left">
-                            <p> <i class="fas fa-search"></i>  search</p>
+                            <i class="fas fa-search"></i>  search
                         </div>
             </form>
 

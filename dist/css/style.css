@@ -212,7 +212,7 @@ footer a {
       margin-top: 3rem; } }
 
 .btn {
-  padding: .9rem 3rem;
+  padding: 1.25rem 3rem;
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   border-radius: 2rem;
@@ -222,12 +222,14 @@ footer a {
   text-transform: capitalize; }
   @media (max-width: 56.25em) {
     .btn {
-      padding: 1rem 3rem; } }
+      padding: 1.4rem 3rem; } }
 
 .btn-search {
   margin-left: -4rem;
   z-index: 2;
-  transition: all .3s; }
+  transition: all .3s;
+  outline: none;
+  border: none; }
   @media (max-width: 37.5em) {
     .btn-search {
       margin-left: -12rem; } }
@@ -323,7 +325,8 @@ footer a {
 
 .section-cards {
   background-color: #f7f7f7;
-  margin: 0 2rem; }
+  margin: 0 2rem;
+  min-height: 80vh; }
 
 footer {
   background-color: #191912;

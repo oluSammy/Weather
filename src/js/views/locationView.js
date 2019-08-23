@@ -354,7 +354,7 @@ export const renderWeather = (locations) =>{
                             </li>
                             <li class="humidity">
                                 <p class="title">humidity</p>
-                                <p class="humidity-status right"><i class="far fa-dewpoint"></i> ${locations[5].main.wind} &#37;</p>
+                                <p class="humidity-status right"><i class="far fa-dewpoint"></i> ${locations[5].main.humidity} &#37;</p>
                             </li>
                         </ul>
                     </div>
@@ -371,3 +371,9 @@ export const renderWeather = (locations) =>{
     `;
     domElements.cards.insertAdjacentHTML('beforeend', markup);
 };
+
+
+
+                    
+                    
+                    
