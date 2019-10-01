@@ -1,11 +1,11 @@
 import {domElements} from './base.js';
 
 // Kelvin to Celcius 
-const kelvinToCelcius = (k)=>{
+export const kelvinToCelcius = k=>{
     return Math.round(k - 273.15);
 };
 export const renderWeather = (locations) =>{
-    const imgUrl = `http://openweathermap.org/img/w/`
+    const imgUrl = `http://openweathermap.org/img/w/`;
     const markup = `
         <div class="row">
             <div class="col-1-of-3">
@@ -20,7 +20,7 @@ export const renderWeather = (locations) =>{
                             <p class="temp-value"> ${kelvinToCelcius(locations[0].main.temp)} &#8451;</p>
                         </div>
                         <div class="card__icon">
-                        <div  id="icon"><img id="${locations[0].weather[0].icon}" src="${imgUrl}${locations[0].weather[0].icon}.png" alt="Weather icon"></div>
+                            <div  id="icon"><img id="${locations[0].weather[0].icon}" src="${imgUrl}${locations[0].weather[0].icon}.png" alt="Weather icon"></div>
                         </div>
                         <div class="card__city">
                             <p> <i class="fas fa-map-marker-alt"></i> ${locations[0].name}, ${locations[0].sys.country}</p>
@@ -47,7 +47,8 @@ export const renderWeather = (locations) =>{
                             </li>
                             <li class="wind-direction">
                                 <p class="title">wind-direction</p>
-                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i> ${locations[0].wind.deg} &#176;</p>
+                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i> ${locations[0].wind.deg == undefined ? '&nbsp;--': locations[0].wind.deg} &#176;</p>
+                                
                             </li>
                             <li class="pressure">
                                 <p class="title">pressure</p>
@@ -60,8 +61,8 @@ export const renderWeather = (locations) =>{
                         </ul>
                     </div>
                     <div class="card__forcast">
-                        <div class="btn btn-forecast">
-                            <p>5 days weather forecast <i class="fas fa-link"></i></p>
+                        <div class="btn btn-forecast" data-forecast = "london">
+                            <p>4 days weather forecast <i class="fas fa-link"></i></p>
                       </div>
                     </div>
 
@@ -105,7 +106,7 @@ export const renderWeather = (locations) =>{
                             </li>
                             <li class="wind-direction">
                                 <p class="title">wind-direction</p>
-                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i>${locations[1].wind.deg} &#176;</p>
+                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i>${locations[1].wind.deg == undefined ? '&nbsp;--': locations[1].wind.deg} &#176;</p>
                             </li>
                             <li class="pressure">
                                 <p class="title">pressure</p>
@@ -118,8 +119,8 @@ export const renderWeather = (locations) =>{
                         </ul>
                     </div>
                     <div class="card__forcast">
-                        <div class="btn btn-forecast">
-                            <p>5 days weather forecast <i class="fas fa-link"></i></p>
+                        <div class="btn btn-forecast" data-forecast = "new york">
+                            <p>4 days weather forecast <i class="fas fa-link"></i></p>
                       </div>
                     </div>
 
@@ -164,7 +165,7 @@ export const renderWeather = (locations) =>{
                             </li>
                             <li class="wind-direction">
                                 <p class="title">wind-direction</p>
-                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i>${locations[2].wind.deg} &#176;</p>
+                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i>${locations[2].wind.deg == undefined ? '&nbsp;--': locations[2].wind.deg} &#176;</p>
                             </li>
                             <li class="pressure">
                                 <p class="title">pressure</p>
@@ -177,8 +178,8 @@ export const renderWeather = (locations) =>{
                         </ul>
                     </div>
                     <div class="card__forcast">
-                        <div class="btn btn-forecast">
-                            <p>5 days weather forecast <i class="fas fa-link"></i></p>
+                        <div class="btn btn-forecast" data-forecast = "lagos">
+                            <p>4 days weather forecast <i class="fas fa-link"></i></p>
                       </div>
                     </div>
 
@@ -241,8 +242,8 @@ export const renderWeather = (locations) =>{
                         </ul>
                     </div>
                     <div class="card__forcast">
-                        <div class="btn btn-forecast">
-                            <p>5 days weather forecast <i class="fas fa-link"></i></p>
+                        <div class="btn btn-forecast" data-forecast = "paris">
+                            <p>4 days weather forecast <i class="fas fa-link"></i></p>
                       </div>
                     </div>
 
@@ -286,7 +287,7 @@ export const renderWeather = (locations) =>{
                             </li>
                             <li class="wind-direction">
                                 <p class="title">wind-direction</p>
-                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i>${locations[4].wind.deg} &#176;</p>
+                                <p class="wind-direction-status right"> <i class="fas fa-compass"></i>${locations[4].wind.deg == undefined ? '&nbsp;--': locations[4].wind.deg} &#176;</p>
                             </li>
                             <li class="pressure">
                                 <p class="title">pressure</p>
@@ -299,8 +300,8 @@ export const renderWeather = (locations) =>{
                         </ul>
                     </div>
                     <div class="card__forcast">
-                        <div class="btn btn-forecast">
-                            <p>5 days weather forecast <i class="fas fa-link"></i></p>
+                        <div class="btn btn-forecast" data-forecast = "ibadan">
+                            <p>4 days weather forecast <i class="fas fa-link"></i></p>
                       </div>
                     </div>
 
@@ -342,7 +343,7 @@ export const renderWeather = (locations) =>{
                             </li>
                             <li class="wind-speed">
                                 <p class="title">wind-speed</p>
-                                <p class="wind-speed-status right"><i class="fas fa-wind"></i> ${locations[5].wind.deg} m/s</p>
+                                <p class="wind-speed-status right"><i class="fas fa-wind"></i> ${locations[5].wind.deg == undefined ? '&nbsp;--': locations[5].wind.deg} m/s</p>
                             </li>
                             <li class="wind-direction">
                                 <p class="title">wind-direction</p>
@@ -359,8 +360,8 @@ export const renderWeather = (locations) =>{
                         </ul>
                     </div>
                     <div class="card__forcast">
-                        <div class="btn btn-forecast">
-                            <p>5 days weather forecast <i class="fas fa-link"></i></p>
+                        <div class="btn btn-forecast" data-forecast = "dubai">
+                            <p>4 days weather forecast <i class="fas fa-link"></i></p>
                       </div>
                     </div>
                      

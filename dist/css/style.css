@@ -52,7 +52,9 @@ body {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
   .row:not(:last-child) {
     margin-bottom: 1rem; }
   .row::after {
@@ -240,64 +242,69 @@ footer a {
 .btn:hover {
   transform: scaleX(1.05); }
 
-.card, .forecast {
-  padding-top: 5rem;
-  padding-bottom: 5rem; }
-  @media (max-width: 37.5em) {
-    .card, .forecast {
-      padding-bottom: 2rem; } }
-  .card__top, .forecast__top {
-    border-radius: 2rem;
-    border-radius: 10px;
-    position: relative; }
-  .card__picture, .forecast__picture {
-    height: 20rem;
-    background-size: cover;
-    background-blend-mode: color; }
-    .card__picture--1, .forecast__picture--1 {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/london.jpg); }
-    .card__picture--2, .forecast__picture--2 {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/new-york.jpg); }
-    .card__picture--3, .forecast__picture--3 {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/lagos.jpg); }
-    .card__picture--4, .forecast__picture--4 {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/paris.jpg); }
-    .card__picture--5, .forecast__picture--5 {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/ibadan.jpg); }
-    .card__picture--6, .forecast__picture--6 {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/dubai.jpg); }
-    .card__picture--sky, .forecast__picture--sky {
-      background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/sky.jpg); }
-  .card__temp p, .forecast__temp p {
-    font-size: 3rem;
-    font-weight: 300;
-    color: #fff;
-    position: absolute;
-    top: 1rem;
-    left: 2rem; }
-  .card__icon img, .forecast__icon img {
-    position: absolute;
-    top: 0;
-    left: 20rem;
-    width: 11rem; }
-  .card__city p, .forecast__city p {
-    font-size: 3rem;
-    font-weight: 400;
-    color: #fff;
-    position: absolute;
-    top: 15rem;
-    left: 2rem; }
-  .card__bottom ul li, .forecast__bottom ul li {
-    list-style-type: none; }
-    .card__bottom ul li::after, .forecast__bottom ul li::after {
-      content: "";
-      display: table;
-      clear: both; }
-  .card__bottom ul li:nth-child(even), .forecast__bottom ul li:nth-child(even) {
-    background: #a4b2db; }
-  .card__bottom--weather, .forecast__bottom--weather {
-    border: 1px solid #0000b3;
-    padding: 1rem; }
+@media (max-width: 37.5em) {
+  .card, .forecast {
+    padding-bottom: 2rem; } }
+
+.card__top, .forecast__top {
+  border-radius: 2rem;
+  border-radius: 10px;
+  position: relative; }
+
+.card__picture, .forecast__picture {
+  height: 20rem;
+  background-size: cover;
+  background-blend-mode: color; }
+  .card__picture--1, .forecast__picture--1 {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/london.jpg); }
+  .card__picture--2, .forecast__picture--2 {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/new-york.jpg); }
+  .card__picture--3, .forecast__picture--3 {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/lagos.jpg); }
+  .card__picture--4, .forecast__picture--4 {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/paris.jpg); }
+  .card__picture--5, .forecast__picture--5 {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/ibadan.jpg); }
+  .card__picture--6, .forecast__picture--6 {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/dubai.jpg); }
+  .card__picture--sky, .forecast__picture--sky {
+    background-image: linear-gradient(to right bottom, #002db3, #0033cc), url(../img/sky.jpg); }
+
+.card__temp p, .forecast__temp p {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 2rem; }
+
+.card__icon img, .forecast__icon img {
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  width: 11rem; }
+
+.card__city p, .forecast__city p {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  top: 15rem;
+  left: 2rem; }
+
+.card__bottom ul li, .forecast__bottom ul li {
+  list-style-type: none; }
+  .card__bottom ul li::after, .forecast__bottom ul li::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.card__bottom ul li:nth-child(even), .forecast__bottom ul li:nth-child(even) {
+  background: #a4b2db; }
+
+.card__bottom--weather, .forecast__bottom--weather {
+  border: 1px solid #0000b3;
+  padding: 1rem; }
 
 .title {
   float: left;

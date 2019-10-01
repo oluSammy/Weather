@@ -1,0 +1,17 @@
+July-17-2019. 4:51AM
+
+1 week: study forkify and finish UI
+2 weeks:finish project
+
+Week 1:
+Day1
+watch 10 vids
+research and decide the look, feel and features of the app
+read 3 articles
+
+url https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=YOUR_API_KEY 
+api.openweathermap.org/data/2.5/forecast?id=524901&appid=YOUR_API_KEY
+api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
+api.openweathermap.org/data/2.5/forecast?lat=35&lon=139
+api.openweathermap.org/data/2.5/forecast?zip=94040,us
+api key 67d2ed2bdf46af7df4a0695665f86c8f

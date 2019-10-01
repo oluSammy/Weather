@@ -1,11 +1,12 @@
 export const domElements = {
     cards: document.querySelector('.section-cards'),
-    search: document.querySelector('.search'),
+    search: document.querySelectorAll('.search'),
     loaders: document.querySelectorAll('.loaders'),
     searchBtn: document.querySelector('.btn-search'),
     searchQuery: document.querySelector('.search-field'),
     forecast: document.querySelector('.section-forecast'),
-    date: document.querySelector('.header__date')
+    date: document.querySelector('.header__date'),
+    searchQuery2: document.querySelector('.search-field2')
 }
 
 export const renderSpinner = parent=>{
@@ -101,4 +102,8 @@ export const clearSpinner = parent =>{
 
     if(domElements.loaders)
         parent.innerHTML = '';
-}
+};
+
+export const clearForecast = () =>{
+    document.querySelector('.forecast__content').innerHTML = '';
+};
