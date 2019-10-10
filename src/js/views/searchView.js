@@ -195,12 +195,7 @@ export const renderNextDay = (id, day)=>{
                         <div class="forecast__day-time left">
                                     <p class="forecast__date">${renderDay(day[0].dt_txt)}</p>
                                 </div>
-                        <div class="forecast__menu left">
-                            <ul class="forecast__menu-ul">
-                                <li class="forecast__menu-li active">Day</li>                                    
-                                <li class="forecast__menu-li">Night</li>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <div class="forecast__weather">
                         <div class="forecast__step">

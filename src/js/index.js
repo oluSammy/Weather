@@ -34,6 +34,7 @@ const defaultLocations = ['london', 'new york', 'lagos', 'paris', 'ibadan', 'dub
       clearSpinner(domElements.cards); 
       locationView.renderWeather(state.defaultLocationsObjects); 
       
+      
   };
   controlDefaultLocation(defaultLocations);
 
