@@ -1,9 +1,8 @@
 import {domElements} from './base.js';
 
 // Kelvin to Celcius 
-export const kelvinToCelcius = k=>{
-    return Math.round(k - 273.15);
-};
+export const kelvinToCelcius = k=> Math.round(k - 273.15);
+
 export const renderWeather = (locations) =>{
     const imgUrl = `http://openweathermap.org/img/w/`;
     const markup = `

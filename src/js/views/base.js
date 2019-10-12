@@ -98,7 +98,6 @@ export const renderSpinnerforecast = (parent)=>{
 };
 
 export const clearSpinner = parent =>{
-    // const parent = domElements.cards;
 
     if(domElements.loaders)
         parent.innerHTML = '';

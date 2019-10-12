@@ -36,7 +36,7 @@ export default class Search{
 
         });
          
-        console.log(this.weather.list);
+        // console.log(this.weather.list);
         this.weather.list.forEach(cur =>{
 
             console.log(getDate(cur.dt_txt));

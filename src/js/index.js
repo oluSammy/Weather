@@ -22,7 +22,7 @@ day4: {},
 //default locations on homepage
 const defaultLocations = ['london', 'new york', 'lagos', 'paris', 'ibadan', 'dubai'];
 
-//Default Location Controller
+//DEFAULT LOCATION CONTROLLER
   async function controlDefaultLocation (cities){
     renderSpinner(domElements.cards);
       for(const item of cities){
@@ -38,10 +38,10 @@ const defaultLocations = ['london', 'new york', 'lagos', 'paris', 'ibadan', 'dub
   };
   controlDefaultLocation(defaultLocations);
 
-//Search Controller
+//SEARCH CONTROLLER
 const controlSearch = ()=>{
   const query = searchView.getInput();
-  // alert(query);
+  
 
   fuselage(query); 
 };
