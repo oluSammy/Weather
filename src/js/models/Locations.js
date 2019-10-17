@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+
+
 export default class Location{
     constructor(query){
         this.query = query;
@@ -12,7 +14,12 @@ export default class Location{
             
             this.weather = result.data; 
         } catch(error){
-            alert(error);
+            //   alert(error);
+            //  console.log(error);
+              if(error == "Error: Network Error"){
+                  alert('Error in network connection');
+                  this.message = "stop execution";
+              }
         }
         
     }

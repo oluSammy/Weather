@@ -25,9 +25,16 @@ const defaultLocations = ['london', 'new york', 'lagos', 'paris', 'ibadan', 'dub
 //DEFAULT LOCATION CONTROLLER
   async function controlDefaultLocation (cities){
     renderSpinner(domElements.cards);
+
+    const test = new Location('moscow');
+    await test.getResults();
+    if (test.message == "stop execution") return;
+    
       for(const item of cities){
           const newItem = new Location(item);
-          await newItem.getResults(); 
+        
+        await newItem.getResults(); 
+        // console.log(newItem.message);
         
         state.defaultLocationsObjects.push(newItem.weather);
       }
@@ -63,6 +70,7 @@ const fuselage = async (query) =>{
 
       try{
         await state.searchWeather.getResults();
+        if(state.searchWeather.message == "stop execution") return;
 
         await state.searchForecast.getForecast();
         state.searchForecast.sortDays();
@@ -79,14 +87,14 @@ const fuselage = async (query) =>{
         state.day4.id = 4;
         state.day4.day = state.searchForecast.day4;
 
-        window.state = state;
+        // window.state = state;
 
         clearSpinner(domElements.forecast); 
         searchView.renderLocation(state.day1.id, state.searchWeather, state.day1.day);
         document.querySelector('.forecast__cur-prev').style.visibility = 'hidden';
       }catch(error){
         alert(error);
-        console.log(error);
+        // console.log(error);
       }
 
   }
@@ -146,7 +154,7 @@ domElements.forecast.addEventListener('click', e=>{
 
 domElements.cards.addEventListener('click', e =>{
   // const query;
-  console.log(e.target);
+  // console.log(e.target);
   if(e.target.closest('.btn-forecast')){
     let query = e.target.closest('.btn-forecast').dataset.forecast;
 
